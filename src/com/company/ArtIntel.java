@@ -21,7 +21,7 @@ public class ArtIntel {
             }
             if (-total== cani || -total == 3)
                 if (Move.play(j, Integer.toString(type) + Integer.toString(w - 1) + Integer.toString(w - 1)))
-                    return "The computer made its move";
+                    return "The computer has played";
 
             type++;
             w = 0;
@@ -32,7 +32,7 @@ public class ArtIntel {
             }
             if (-total == cani || -total == 3)
                 if (Move.play(j, Integer.toString(type) + Integer.toString(2 - w + 1) + Integer.toString(w - 1)))
-                    return "The computer made its move";
+                    return "The computer has played";
             type++;
             total = 0;
             for (int rows = 0; rows < j.length; rows++) { //horizontal
@@ -42,7 +42,7 @@ public class ArtIntel {
                 }
                 if (-total == cani || -total == 3)
                     if (Move.play(j, Integer.toString(type) + Integer.toString(rows) + Integer.toString(c)))
-                        return "The computer made its move";
+                        return "The computer has played";
                 total = 0;
             }
             type++;
@@ -54,7 +54,7 @@ public class ArtIntel {
                 }
                 if (-total == cani || - total== 3)
                     if (Move.play(j, Integer.toString(type) + Integer.toString(r) + Integer.toString(cols)))
-                        return "The computer made its move";
+                        return "The computer has played";
                 total = 0;
             }
             total = 0;
@@ -66,7 +66,7 @@ public class ArtIntel {
             }
             if (total == cani || total == 3)
                 if (Move.play(j, Integer.toString(type) + Integer.toString(w - 1) + Integer.toString(w - 1)))
-                    return "The computer made its move";
+                    return "The computer has played";
             type++;
             w = 0;
             total = 0;
@@ -76,7 +76,7 @@ public class ArtIntel {
             }
             if (total == cani ||total== 3)
                 if (Move.play(j, Integer.toString(type) + Integer.toString(2 - w + 1) + Integer.toString(w - 1)))
-                    return "The computer made its move";
+                    return "The computer has played";
             type++;
             total = 0;
             for (int rows = 0; rows < j.length; rows++) {
@@ -86,7 +86,7 @@ public class ArtIntel {
                 }
                 if (total == cani || total == 3)
                     if (Move.play(j, Integer.toString(type) + Integer.toString(rows) + Integer.toString(c)))
-                        return "The computer made its move";
+                        return "The computer has played";
                 total = 0;
             }
             type++;
@@ -98,7 +98,7 @@ public class ArtIntel {
                 }
                 if (total == cani || total == 3)
                     if (Move.play(j, Integer.toString(type) + Integer.toString(r) + Integer.toString(cols)))
-                        return "The computer made its move";
+                        return "The computer has played";
                 total = 0;
             }
             cani--;
