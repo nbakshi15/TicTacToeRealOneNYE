@@ -4,21 +4,22 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+        Scanner user = new Scanner(System.in);
         System.out.println("Hello! Welcome to The World's Best Tic Tac Toe Game");
         int x = 1;
         int turn = 0;
         int row, column;
-        String reply = "";
-        Scanner user = new Scanner(System.in);
+        String response = "";
+
         String board [][] = {{"-", "-", "-"},{ "-", "-", "-"},{ "-", "-","-"}};
         Board surface = new Board(board);
         surface.printBoard();
         System.out.println("You,the user, will be player X");
-        while (!reply.equalsIgnoreCase("yes")&&!reply.equalsIgnoreCase("no")) {
+        while (!response.equalsIgnoreCase("yes")&&!response.equalsIgnoreCase("no")) {
             System.out.println("Would you like to go first? (yes or no)");
-            reply = user.next();
+            response = user.next();
         }
-        while (reply.equalsIgnoreCase("yes"))
+        while (response.equalsIgnoreCase("yes"))
         {
             while (x==1) {
                 System.out.println("Enter which row you would like to move to");
@@ -29,20 +30,20 @@ public class Main {
                     x = 0;
             }
             x = 1;
-            String h = ArtIntel.moveAI(board);
-            System.out.println(h);
+            String hello = ArtIntel.moveAI(board);
+            System.out.println(hello);
             surface.printBoard();
-            if (h.equalsIgnoreCase("Game over"))
+            if (hello.equalsIgnoreCase("Game over"))
                 break;
             if(Board.moveBD(board)) {
                 System.out.println("Game over");
                 break;
             }
         }
-        while (reply.equalsIgnoreCase("no"))
+        while (response.equalsIgnoreCase("no"))
         {
-            String h = ArtIntel.moveAI(board);
-            System.out.println(h);
+            String hello = ArtIntel.moveAI(board);
+            System.out.println(hello);
             surface.printBoard();
             if(Board.moveBD(board)) {
                 System.out.println("Game over");
@@ -64,7 +65,7 @@ public class Main {
             }
             x = 1;
             surface.printBoard();
-            if (h.equalsIgnoreCase("Game over"))
+            if (hello.equalsIgnoreCase("Game over"))
                 break;
         }
     }
